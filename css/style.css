@@ -95,11 +95,11 @@ body {
     color: inherit;
     background-color: var(--color-grey-light-2);
     border: none;
-    padding: .7rem 2rem;
+    padding: 0.7rem 2rem;
     border-radius: 100px;
     width: 90%;
     margin-right: -3.25rem;
-    transition: all .2s; }
+    transition: all 0.2s; }
     .search__input:focus {
       outline: none;
       width: 100%;
@@ -142,7 +142,7 @@ body {
     width: 2.25rem;
     fill: var(--color-grey-dark-2); }
   .user-nav__notification {
-    font-size: .8rem;
+    font-size: 0.8rem;
     height: 1.75rem;
     width: 1.75rem;
     border-radius: 50%;
@@ -166,7 +166,7 @@ body {
   .side-nav__item {
     position: relative; }
     .side-nav__item::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -203,10 +203,25 @@ body {
   padding: 2.5rem; }
 
 .gallery {
-  display: flex; }
+  width: 100%;
+  overflow-x: hidden;
+  position: relative; }
+  .gallery__box {
+    display: flex;
+    width: 200%;
+    position: relative;
+    top: 0;
+    left: 0;
+    animation: slide 50s infinite linear; }
   .gallery__photo {
     width: 100%;
     display: block; }
+
+@keyframes slide {
+  from {
+    left: 0; }
+  to {
+    left: -100%; } }
 
 .overview {
   display: flex;
@@ -223,7 +238,7 @@ body {
     height: 1.75rem;
     fill: var(--color-primary); }
     .overview__icon--location {
-      margin-right: .5rem; }
+      margin-right: 0.5rem; }
   .overview__stars {
     margin-right: auto;
     display: flex; }
@@ -236,14 +251,14 @@ body {
     margin-left: 3rem;
     color: #fff;
     text-align: center;
-    padding: .5rem 2.25rem 1.5rem;
+    padding: 0.5rem 2.25rem 1.5rem;
     align-self: stretch; }
   .overview__rating-average {
     font-size: 2.5rem;
     font-weight: 300;
     margin-bottom: -3px; }
   .overview__rating-count {
-    font-size: .8rem;
+    font-size: 0.8rem;
     text-transform: uppercase; }
 
 .btn-inline, .btn-inline:link, .btn-inline:visited {
@@ -256,7 +271,7 @@ body {
   display: inline-block;
   background-color: transparent;
   cursor: pointer;
-  transition: all .2s; }
+  transition: all 0.2s; }
 
 .btn-inline:hover {
   color: var(--color-grey-dark-1); }
